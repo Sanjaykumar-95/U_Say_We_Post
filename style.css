@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    margin-top: 5px;
 }
 
 .Page_Title{
@@ -34,4 +35,9 @@
 .submit_page_info h3{
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
+}
+.footer_title{
+    color: green;
+    font-size: 30px;
+    font-weight: bolder;
 }

@@ -1,24 +1,25 @@
-const form2 = document.getElementById('form2');
-const title2 = document.getElementById('title2');
-const quote2 = document.getElementById('quote2');
-const message2 = document.getElementById('msg2');
+const form1 = document.getElementById('form1');
+const title1 = document.getElementById('title1');
+const quote1 = document.getElementById('quote1');
+const message1 = document.getElementById('msg1');
+const date1 = document.getElementById('date1');
 
-function Post_sendEmail() {
-    const bodyMessage = `Title: ${title2.value} <br> Quote:  ${quote2.value} <br> Message:  ${message2.value};`;
+function Contact_sendEmail() {
+    const bodyMessage = `Title: ${title1.value} <br> Quote:  ${quote1.value} <br> Message:  ${message1.value}; <br> Date : ${date1.value}`;
     Email.send({
         Host: "smtp.elasticemail.com",
         Username: "uniqcarts64@gmail.com",
         Password: "3BC8115C91CB1C4748D49763FA441E5946F5",
         To: 'uniqcarts64@gmail.com',
         From: "uniqcarts64@gmail.com",
-        Subject: "Post Mail",
+        Subject: "Contact Mail",
         Body: bodyMessage
     }).then(
         message => {
             if (message === 'OK') {
                 Swal.fire({
                     title: "Success!",
-                    text: "Message Sent Successfully!, Will update within 24hrs",
+                    text: "Thanks for contacting us, We will get back to you soon!",
                     icon: "success"
                 });
             } else {
@@ -32,13 +33,12 @@ function Post_sendEmail() {
     );
 }
 
-form2.addEventListener('submit', (e) => {
+form1.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    Post_sendEmail();
+    Contact_sendEmail();
 
     setTimeout(() => {
         location.reload();
     }, 3000);
-
 });

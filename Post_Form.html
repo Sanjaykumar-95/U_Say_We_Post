@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row Page_Title">
+            <button class="btn btn-primary" style="float: left;"><a href="index.html" style="color: white; text-decoration: none;"><i class="fa fa-arrow-left" aria-hidden="true" style="font-size: 12px;"></i> Back</a></button>
+            <div class="col-md-12">U Say We Post</div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 Info">
+                <span>Fill The Bellow Form What you want to Post in it</span>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+
+                <div class="box">
+                    <form action="#" method="post" id="form2">
+                        <div class="form-group">
+                            <label for="title2">Title:</label>
+                            <input type="text" class="form-control" id="title2" placeholder="Enter Title" name="title2">
+                        </div>
+                        <div class="form-group">
+                            <label for="Quote2">Quote:</label>
+                            <input type="text" class="form-control" id="quote2" placeholder="Enter Quote" name="Quote">
+                        </div>
+                        <div class="form-group">
+                            <label for="msg2">Message:</label>
+                            <textarea class="form-control" name="msg2" id="msg2" rows="5" placeholder="Enter the your Messages"></textarea>
+                        </div>
+        
+                        <!-- <div class="form-group">
+                            <label for="imgs2">Images:</label>
+                            <input type="file" id="imgs2" accept="image/*" style="display: none;">
+                            <button class="btn" onclick="document.getElementById('imgs').click(); event.preventDefault();"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            <div class="img-preview" id="imgPreview"></div>
+                        </div> -->
+        
+                        <div class="form-group">
+                            <button class="form-control btn btn-success" id="PostButton" type="submit">Post</i></button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+
+    <!-- <script>
+        document.getElementById('imgs').addEventListener('change', function(event) {
+            const files = event.target.files;
+
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                const reader = new FileReader();
+
+                reader.onload = function() {
+                    const imgPreview = document.getElementById('imgPreview');
+                    const imgElement = document.createElement('img');
+                    imgElement.src = reader.result;
+                    imgElement.style.maxWidth = '100px';
+                    imgElement.style.maxHeight = '100px';
+                    imgPreview.appendChild(imgElement);
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+    </script> -->
+
+</body>
+</html>
